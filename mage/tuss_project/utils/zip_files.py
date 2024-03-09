@@ -27,13 +27,10 @@ class ZipFiles():
         with requests.get(url, stream=True) as r:
             if r.status_code == 200:
                 with open(local_filename, 'wb') as f:
-                    for chunk in r.iter_content(chunk_size=8192): 
-                        # If you have chunk encoded response uncomment if
-                        # and set chunk_size parameter to None.
-                        #if chunk: 
+                    for chunk in r.iter_content(chunk_size=8192):
                         f.write(chunk)
             else:
-                raise Exception('It was no possible to download the file')
+                return 'It was no possible to download the file'
 
         return os.path.abspath(f'{local_filename}')
     

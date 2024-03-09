@@ -24,7 +24,7 @@ blocks:
   language: python
   name: get_tuss_data_2_download_file
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
@@ -51,8 +51,6 @@ spark_config: {}
 tags: []
 type: python
 uuid: get_tuss_data
-variables:
-  ANO: 2023
-  MES: 09
+variables: {}
 variables_dir: /home/src/mage_data/tuss_project
 widgets: []
