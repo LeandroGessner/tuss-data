@@ -13,7 +13,7 @@ services:
   postgres:
     build: ./postgres
     ports:
-      - "5432:5432"  # Expose publicly
+      - "5432:5432"
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
@@ -26,19 +26,6 @@ services:
   #   restart: always
   #   ports:
   #     - 8080:8080
-  
-  # mageai:
-  #   image: mageai/mageai:latest
-  #   command: mage start ${PROJECT_NAME}
-  #   # build: ./mageai
-  #   ports:
-  #     - 6789:6789
-  #   environment:
-  #     REQUIRE_USER_AUTHENTICATION: ${REQUIRE_USER_AUTHENTICATION}
-  #     USER_CODE_PATH: /home/src/${PROJECT_NAME}
-  #   volumes:
-  #     - mageai_data:/home/src/
-  #   restart: on-failure:5
 
 volumes:
   pg_data:

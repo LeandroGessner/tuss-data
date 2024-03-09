@@ -14,6 +14,21 @@ blocks:
   type: custom
   upstream_blocks: []
   uuid: get_tuss_data_1_setup
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: get_tuss_data_2_download_file
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: get_tuss_data_2_download_file
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
@@ -36,5 +51,8 @@ spark_config: {}
 tags: []
 type: python
 uuid: get_tuss_data
+variables:
+  ANO: 2023
+  MES: 09
 variables_dir: /home/src/mage_data/tuss_project
 widgets: []
