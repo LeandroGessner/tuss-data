@@ -38,7 +38,7 @@ class ZipFiles():
             self,
             file_to_unpack: str,
             folder: str,
-            one_level: bool=False,
+            one_level: bool = False,
             unpack_nested: bool = True,
             filter: str = '.*'
     ) -> None:

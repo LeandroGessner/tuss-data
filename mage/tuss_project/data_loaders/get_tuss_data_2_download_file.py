@@ -16,7 +16,7 @@ def get_previous_month(months: int) -> tuple[int]:
 
 
 @data_loader
-def load_data():
+def load_data(*args) -> dict:
     """
     Template code for downloading data from brazilian system of health, especically the TUSS codes.
 
@@ -40,7 +40,7 @@ def load_data():
     counter = 1
 
     while downloaded_file_path == 'It was no possible to download the file':
-        print(f'It was no possible to download the file for {mes}/{ano}.')
+        print(f'It was not possible to download the file for {mes}/{ano}.')
         print('Trying 1 month behind.')
         mes, ano = get_previous_month(counter)
         url = f'https://www.ans.gov.br/arquivos/extras/tiss/Padrao_TISS_Representacao_de_Conceitos_em_Saude_{ano}{mes}.zip'
@@ -55,7 +55,7 @@ def load_data():
 
 
 @test
-def test_output(output) -> None:
+def test_output(output: dict) -> None:
     """
     Template code for testing the output of the block.
     """
